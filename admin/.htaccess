@@ -1,0 +1,20 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php
+RewriteRule ^room_create/([^/]+) room_create.php?id=$1
+RewriteRule ^tour_add/([^/]+) tour_add.php?id=$1
+RewriteRule ^tour_add_images/([^/]+) tour_add_images.php?id=$1
+RewriteRule ^tour_images/([^/]+) tour_images.php?id=$1
+RewriteRule ^widgets/([^/]+) widgets/addFacility.php?id=$1
+RewriteRule ^widgets/([^/]+) widgets/addCategory.php?id=$1
+RewriteRule ^gallery_add_images/([^/]+) gallery_add_images.php?id=$1
+RewriteRule ^gallery_images/([^/]+) gallery_images.php?id=$1
+RewriteRule ^widgets/([^/]+) widgets/addFacility.php?id=$1
+RewriteRule ^food_list/([^/]+) food_list.php?id=$1
+RewriteRule ^room_add_images/([^/]+) room_add_images.php?id=$1
+RewriteRule ^room_view_images/([^/]+) room_view_images.php?id=$1
+<IfModule mod_php5.c>
+   upload_max_filesize = 40M
+   post_max_size 40M
+</IfModule>
